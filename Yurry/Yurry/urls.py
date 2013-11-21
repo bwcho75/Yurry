@@ -2,6 +2,8 @@ from django.conf.urls import patterns, include, url
 from Yurry.views import hello
 from reader.views import hello_reader
 from reader.views import what_time_is_it
+from reader.views import group_home
+
 #from django.contrib import admin
 #admin.autodiscover()
 
@@ -12,5 +14,7 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
    url(r'^hello/$', hello),
    url(r'^reader/$',hello_reader),
+   url(r'^home/$',group_home),
    url(r'^time/$',what_time_is_it),
+   
 )

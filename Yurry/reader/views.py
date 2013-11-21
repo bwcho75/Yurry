@@ -13,4 +13,8 @@ def what_time_is_it(request):
     context = Context({'current_time' : current_time })
     return HttpResponse(template.render(context))
 
+def group_home(request):
+    context = Context({})
+    template = loader.get_template("group_home.html")
+    return HttpResponse(template.render(context))
 #http://jhproject.tistory.com/37
