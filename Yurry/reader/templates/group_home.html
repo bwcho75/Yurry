@@ -38,55 +38,26 @@
 						<!-- rolling -->
 			
 						<!-- rolling end -->
-							<table cellpadding="10" style="background-color: #ECECF0"  >
-								<tr>
-								 <td>
-								 	<img src="{% static "img/terry.jpg" %} " aligh=left width=40>
+							<!-- print each posting -->
+							{% for post in f %}
+							<table border=0 cellpadding="10" style="background-color: #ECECF0"  width=100% >
+								<tr >
+								 <td valign=top width=60>
+								 	<img src="https://graph.facebook.com/{{post.from.id}}/picture" aligh=left width=40>
 								 </td>
-								  <td>
-								Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+								  <td align=left>
+									  <p style="font-size: 9pt ; font-family: 돋움">
+									  <b>{{ post.from.name }}</b>  
+									  <BR>
+									  {{ post.message|linebreaksbr }} <BR>
+									  </p>
 								  </td>
+								  
 								</tr>
 							</table>
 							<p>
-							<table cellpadding="5"   >
-								<tr style="background-color: #ECECF0" >
-								 <td>
-								 	<img src="{% static "img/terry.jpg" %} " aligh=left width=40>
-								 </td>
-								  <td>
-								  <p style="font-size: 10pt ; font-family: 돋움">
-								[온라인 세미나 공지]\n조대협입니다. SSAG에서 단순히 페이스북만을 통한 정보 교류만이 아닌 다음단계로 조금 더 나가보려고 합니다. 다들 바쁘신 관계로, 오프라인보다는 온라인을 통한 정보 교류를 진행해보려고 합니다.\n\ncloudant.com 의 MyeongHoon Jerry Jeong 이사님이 Citrix Online 세미나 6개월 사용권을 협찬해주셨습니다. 한달에 1~2회 정도 야심한 밤에 온라인 세미나를 진행해볼까 합니다.\n\n첫번째 발표 Candidate로는 Dae Myung Clark Kang님의 Redis,  MyeongHoon Jerry Jeong님의 Chef, 송상준님의 LDAP, 최지웅이사님의 서버 자유주제 강좌 등을 생각하고 있습니다. 의견 주시고. Volunteer도 받습니다. 감사합니다.  </td>
-									</P>
-								</tr>
-								<tr style="background-color: #F0ECEC">
-								<td>
-								</td>
-								<td>
-								  <p style="font-size: 10pt ; font-family: 돋움">
-								<img src="{% static "img/terry.jpg" %} " aligh=left width=30>
-									<B> 조대협 </B>
-									이 곳은 댓글을 다는 공간입니다. 무슨 댓글을 달아야 할까
-										</P>
-									</td>
-								</tr>
-							</table>
-						
+							{% endfor %}
 							
-							<p>
-							<table cellpadding="10" style="background-color: #ECECF0"  >
-								<tr>
-								 <td>
-								 	<img src="{% static "img/terry.jpg" %} " aligh=left width=40>
-								 </td>
-								  <td>
-								  <p style="font-size: 10pt ; font-family: 돋움">
-								NHN 에서 6년 반 동안 개발하던 방식을 이음 API 서버에 적용해봤습니다. 아파치 모듈을 개발하는게 저변이 별로 없어서 생소하지만 제법 개발하는 재미가 있고 성능은 확실합니다. 저희 회사 블로그에 올라간 첫 글인데 재미삼아 읽어보시면 좋을 것 같습니다.
-http://bigmatch.i-um.net/?p=5
-								  </p>
-								  </td>
-								</tr>
-							</table>
 					
 						</div>
 					</div>
