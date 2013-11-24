@@ -26,13 +26,13 @@
 			</div>
 		</div>
 		<div class="row clearfix">
-			<div class="col-md-8 column">
+			<div class="col-md-10 column">
 			
 				<div class="row clearfix">
-					<div class="col-md-2 column">
+					<div class="col-md-1 column">
 						
 					</div>
-					<div class="col-md-10 column">
+					<div class="col-md-11 column">
 						<div  >
 						
 						<!-- rolling -->
@@ -40,22 +40,30 @@
 						<!-- rolling end -->
 							<!-- print each posting -->
 							{% for post in f %}
-							<table border=0 cellpadding="10" style="background-color: #ECECF0"  width=100% >
+							<div class="well well-sm">
+							<table border=0 cellpadding="5" style="background-color: #ECECF0"  width=100% >
 								<tr >
 								 <td valign=top width=60>
 								 	<img src="https://graph.facebook.com/{{post.from.id}}/picture" aligh=left width=40>
 								 </td>
 								  <td align=left>
 									  <p style="font-size: 9pt ; font-family: 돋움">
-									  <b>{{ post.from.name }}</b>  
+									  <!-- Author name -->
+									  <b>{{ post.from.name }}</b>  <span class="glyphicon glyphicon-thumbs-up"></span> {{ post.likes.data|length }}
 									  <BR>
+									  <!-- Posting message  -->
 									  {{ post.message|linebreaksbr }} <BR>
+									  
 									  </p>
 								  </td>
 								  
 								</tr>
 							</table>
-							<p>
+							
+							
+							
+							</div>
+							
 							{% endfor %}
 							
 					
@@ -84,7 +92,7 @@
 					
 				</nav>
 			</div>
-			<div class="col-md-4 column">
+			<div class="col-md-2 column">
 				
 					
 				

@@ -18,11 +18,8 @@ def what_time_is_it(request):
 def group_home(request):
     # call facebook group feed
     GROUP_ID='352245738171385'
-    ACCESS_TOKEN='CAACEdEose0cBAJYFZCZB1qk2paJZBPyZAnIn277U5TXWpAlSNguxPFQZAoxqaYZApQcRkrJYjziTIv9QhcugGZAZBNZB6J6GfOYxeZAZCOqfMtFzqSyHcQZCq0X4y9QjZCfSgHfdmyrAcVfaW53TKNSBZBi4m6GbQOwnprj3RVuQ6uTVNexPYwCaN3IoYWQ9F3oEYOe3qCOgVtyj4LcQZDZD'
+    ACCESS_TOKEN='CAACEdEose0cBAISubYFbL8dTGmlQ3jKSN17nKXggS44Bu7onp7dS1UNZC3xhx0GVDcdFZBDsXITiOCsyfMJXHxzSSmUDmukflTlld8J1ZAhoQZBSqRhd9dMvKdlMY12GVflmd75upXaOccUaYutZCnSZBLWuszpReMHGF5lSPjku22Qilyj0w8API48xbYAZBOXStfFBsSYIgZDZD'
     feed = inqury_group_feed(GROUP_ID,ACCESS_TOKEN) 
-
-    for item in feed['data']:
-        print item['from']['name']
     # send the json feed result to template thru context
     context = Context({'f':feed['data']})
     template = loader.get_template("group_home.html")
