@@ -18,7 +18,7 @@ def what_time_is_it(request):
 def group_home(request):
     # call facebook group feed
     GROUP_ID='352245738171385'
-    ACCESS_TOKEN='CAACEdEose0cBAISubYFbL8dTGmlQ3jKSN17nKXggS44Bu7onp7dS1UNZC3xhx0GVDcdFZBDsXITiOCsyfMJXHxzSSmUDmukflTlld8J1ZAhoQZBSqRhd9dMvKdlMY12GVflmd75upXaOccUaYutZCnSZBLWuszpReMHGF5lSPjku22Qilyj0w8API48xbYAZBOXStfFBsSYIgZDZD'
+    ACCESS_TOKEN='CAACEdEose0cBADBCeCL3N8a3iwjeVb5E9QMRAxV55rZAoT7FzPHAlxMYCrWZAUatXcMKgRhZCGYibY1Tn2ZCqS15EG94xCeZAXP3o0QoWHuoe7I4toRsNnNI5Rpe7HdmxsP5IwGhTSkJqMH91kR1tVJAjW7HssyTq20PWSnkByq5OaukNg5taktipJ76Yk6h24kf8WoH0BwZDZD'
     feed = inqury_group_feed(GROUP_ID,ACCESS_TOKEN) 
     # send the json feed result to template thru context
     context = Context({'f':feed['data']})
