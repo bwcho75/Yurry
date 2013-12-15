@@ -42,7 +42,7 @@
 								  <td align=left>
 									  <p style="font-size: 9pt ; font-family: 돋움">
 									  <!-- Author name -->
-									  <b>{{ post.from.name }}</b>  <span class="glyphicon glyphicon-thumbs-up"></span> {{ post.likes.data|length }}
+									  <b>{{ post.from.name }}</b> {{ post.created_time }}  <span class="glyphicon glyphicon-thumbs-up"></span> {{ post.likes.data|length }}
 									  <BR>
 									  <!-- Posting message  -->
 									  {{ post.message|linebreaksbr }} <BR>
@@ -62,7 +62,7 @@
 									 	</td>
 										<td>
 										 	<p style="font-size: 9pt ; font-family: 돋움">
-											<b>{{ comment.from.name }}</b>  <span class="glyphicon glyphicon-thumbs-up"></span> {{ comment.likes.data|length }}
+											<b>{{ comment.from.name }}</b>  {{ comment.created_time }}  <span class="glyphicon glyphicon-thumbs-up"></span> {{ comment.likes.data|length }}<br>
 										 	{{ comment.message|linebreaksbr }}<BR>
 										 	</p>
 										</td>
